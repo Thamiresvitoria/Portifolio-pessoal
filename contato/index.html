@@ -4,55 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portifolio Pessoal</title>
-  <link rel="stylesheet" href="./style/resert.css">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="../style/resert.css">
+  <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../Assets/Logo_semfundo.svg" type="image/x-icon">
+  <title></title>
 </head>
 
 <body>
 
   <header>
     <nav class="navbar">
-      <img src="./Assets/Logo_semfundo.svg" alt="">
+      <a href="../index.html"><img id="logo" src="../Assets/Logo_semfundo.svg" alt="Logo"></a>
       <ul>
-        <li><a href="index.html">MENU</a></li>
-        <li><a href="./sobre/index.html">SOBRE MIM</a></li>
-        <li><a href="./tecnologia/index.html">TECNOLOGIAS</a></li>
-        <li><a href="./projeto/index.html"></a>PROJETOS</li>
-        <li><a href="./contato/index.html"></a>CONTATOS</li>
+        <li><a href="../index.html">MENU</a></li>
+        <li><a href="../sobre/index.html">SOBRE MIM</a></li>
+        <li><a href="../tecnologia/index.html">TECNOLOGIAS</a></li>
+        <li><a href="../projeto/index.html">PROJETOS</a></li>
+        <li><a href="index.html">CONTATOS</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <img src="" alt="">
-      <div class="textos">
-        <span>OLÁ, EU SOU</span>
-        <h1> THAMIRES <span id="nome"> VITORIA </span></h1>
-        <h2>Sou estudante de analise e desenvolvimenro de sistema</h2>
-        <p></p>
-      </div>
-      <div class="btn">
-        <button class="projetos">VER MEUS PROJETOS</button>
-        <img src="./Assets/arrow-prev 1.svg" alt="seta para o lado">
-      </div>
-      <div class="icones">
-        <i><img src="./Assets/linkedin 1.svg" alt=""></i>
-        <i><img src="./Assets/github 1.svg" alt=""></i>
-        <i><img src="./Assets/whatsapp 1.svg" alt=""></i>
+      <div class="container-contato">
+        <img src="../Assets/estrela.svg" alt="Contato">
+        <div class="texto-contato">
+          <h1>VAMOS CONSTRUIR</h1>
+          <span> ALGO INCRÍVEL JUNTOS ?</span>
+          <p>Entre em contato comigo para criarmos projetos
+            incriveis. Estou sempre aberta a novas oportunidades
+            e ideias.</p>
+        </div>
+
+        <div class="formulario">
+          <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required >
+            <input type="text" placeholder="Assunto" required>
+            <textarea placeholder="Sua mensagem"></textarea>
+            <button type="submit">ENVIAR MENSAGEM</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <p> © TODOS OS DIREITOS RESERVADOS</p>
-    <div class="icones">
-      <i><img src="./Assets/linkedin 1.svg" alt=""></i>
-      <i><img src="./Assets/github 1.svg" alt=""></i>
-      <i><img src="./Assets/whatsapp 1.svg" alt=""></i>
-    </div>
+      <div class="icones-footer">
+        <i><a href="https://www.linkedin.com/in/thamires-vitoria-muniz-da-silva-7b3878352/" target="_blank"><img src="./Assets/linkedin 1.svg" alt="LinkedIn"></a></i>
+        <i><a href="https://github.com/Thamiresvitoria" target="_blank"><img src="./Assets/github 1.svg" alt="GitHub"></a></i>
+        <i><a href="https://wa.me/5511999999999" target="_blank"><img src="./Assets/whatsapp 1.svg" alt="WhatsApp"></a></i>
+      </div>
   </footer>
 
 </body>

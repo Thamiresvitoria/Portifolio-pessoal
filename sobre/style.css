@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon:wght@300;400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -14,9 +13,12 @@ html {
 body {
   min-height: 100vh;
   background: #111113;
-  color: white;
-  font-family: Inter, sans-serif;
+  color: #ffffff;
+  font-family: 'Iosevka Charon', monospace;
   font-weight: 300;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 body:before {
@@ -42,10 +44,9 @@ body:before {
   align-items: center;
   justify-content: space-between;
   filter: blur(50%);
-  
 }
 
-.navbar > img {
+.navbar>img {
   margin-left: 1rem;
   width: 42px;
   height: 42px;
@@ -111,37 +112,65 @@ main {
 .title {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-.symbol {
-  color: #4c1519;
-  font-size: 48px;
-  line-height: 1;
-  text-shadow: 0 0 10px rgba(227, 41, 46, 0.25);
+.estrela {
+  position: relative;
+  width: 85px;
+  height: 70px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
+
+.estrela img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Barrinha */
+.estrela::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #8C0B1A;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
 
 .title h1 {
-  font: 400 38px "Barlow Condensed";
+  font-size: 38px;
+  font-weight: 400;
   letter-spacing: 0.03em;
+  margin-bottom: 8px;
 }
 
-.title-line {
-  width: 70px;
-  height: 1px;
-  margin: 10px 0 7px;
-  background: var(--red);
-}
 
 .title p {
-  color: var(--muted);
-  font: 300 12px "Barlow Condensed";
+  color: #76787E;
   letter-spacing: 0.06em;
 }
 
 .description {
-  max-width: 570px;
-  margin: 23px 0 0 55px;
+  max-width: 870px;
+  margin: 0px 0 0 110px;
   color: #dedede;
   font-size: 13px;
   line-height: 1.55;
@@ -149,17 +178,24 @@ main {
 
 
 .languages {
-  padding: 24px 28px;
-  min-height: 175px;
-  border: 1px solid var(--border);
+  padding: 20px 20px;
+  min-height: 125px;
+  border: 1px solid #76000C;
   border-radius: 8px;
-  background: var(--card);
-  box-shadow: 0 0 25px rgba(100, 10, 15, 0.08);
+  background: #230E11;
+  transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.languages:hover {
+  border-color: #8C0B1A;
+  box-shadow: 0 0 10px rgba(140, 11, 26, 0.7);
+  background: linear-gradient(145deg, #211012, #76000C);
 }
 
 .languages h2 {
   margin-bottom: 18px;
-  font: 500 23px "Barlow Condensed";
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .language {
@@ -170,12 +206,13 @@ main {
 }
 
 .language strong {
-  font: 400 12px "Barlow Condensed";
+  font-size: 16px;
 }
 
 .language span {
-  color: var(--muted);
+  color: #76787E;
   font-size: 9px;
+  margin-top: 2px;
 }
 
 .cards {
@@ -186,16 +223,16 @@ main {
 }
 
 .info-card {
-  border: 1px solid var(--border);
+  border: 1px solid #8C0B1A;
   border-radius: 7px;
-  background: linear-gradient(145deg, #1a0b0d, #13090a);
+  background: #230E11;
   transition: 0.25s;
 }
 
 .info-card:hover {
-  background: linear-gradient(145deg, #211012, #160a0b);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(80, 5, 10, 0.2);
+  border-color: #8C0B1A;
+  box-shadow: 0 0 10px rgba(140, 11, 26, 0.7);
+  background: linear-gradient(145deg, #211012, #76000C);
 }
 
 .formation,
@@ -211,41 +248,52 @@ main {
   margin-bottom: 18px;
 }
 
-.card-icon{
+.card-icon {
   width: 56px;
   height: 56px;
-  border: 1px solid var(--red);
+  border: 1px solid #8C0B1A;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: var(--red);
+  background: #111113;
   font-size: 25px;
   box-shadow: 0 0 14px rgba(227, 41, 46, 0.15);
 }
 
-.card-icon img{
+.card-icon img {
   height: 36px;
   width: 36px;
+  justify-content: center;
 }
+
 .card-header h2 {
-  font: 400 27px "Barlow Condensed";
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 2.5px;
 }
+
 .red-line {
   width: 40px;
   height: 2px;
   margin-top: 8px;
-  background: var(--red);
+  background: #8C0B1A;
 }
+
 .formation h3 {
-  margin: 18px 0 5px;
-  color: var(--red);
-  font: 400 19px "Barlow Condensed";
+  margin: 18px 0 15px 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
   text-transform: uppercase;
 }
+
 .status {
   color: #aaa;
   font-size: 12px;
+  margin: 0px 0 1px 10px;
 }
+
 .details {
   display: flex;
   gap: 14px;
@@ -253,13 +301,24 @@ main {
   color: #aaa;
   font-size: 11px;
   align-items: center;
+
 }
+
+.details img {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  object-fit: contain;
+  align-items: center;
+}
+
 .separator {
   width: 100%;
   height: 1px;
   margin: 18px 0;
-  background: #402024;
+  background: #ffffff;
 }
+
 .card-description {
   color: #b9b9b9;
   font-size: 12px;
@@ -276,13 +335,18 @@ main {
   grid-template-columns: 42px 1fr 20px;
   align-items: center;
   gap: 12px;
-  background: rgba(0, 0, 0, 0.12);
+  background: #230E11;
   transition: 0.2s;
 }
+
 .course:hover {
-  border-color: var(--red);
-  background: rgba(227, 41, 46, 0.05);
+  border-color: #8C0B1A;
+  box-shadow: 0 0 10px rgba(140, 11, 26, 0.7);
+  background: #1a090b;
+  scale: 1.02;
 }
+
+
 .course-icon {
   width: 34px;
   height: 34px;
@@ -290,56 +354,81 @@ main {
   border-radius: 7px;
   display: grid;
   place-items: center;
-  color: var(--red);
+  coloR: #dedede;
   font-size: 14px;
 }
+
 .course h3 {
-  font: 400 13px "Barlow Condensed";
+  font-size: 13px;
+  font-weight: 500; 
   letter-spacing: 0.03em;
 }
+
 .course p {
-  margin-top: 2px;
-  color: var(--muted);
+  margin-top: 3px;
+  color: #aaa;
   font-size: 10px;
 }
+
 .course b {
-  color: var(--red);
+  color: white;
   font-size: 25px;
   font-weight: 300;
 }
 
 footer {
   width: 100%;
-  min-height: 72px;
-  padding: 0 55px;
-  border-top: 1px solid var(--border);
+  min-height: 80px;
+  padding: 0 40px;
+  border-top: 1px solid #8C0B1A;
   background: #1a090b;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-footer > span {
-  font: 400 16px "Barlow Condensed";
-  letter-spacing: 0.08em;
+
+/* Texto centralizado */
+footer>p {
+  color: #ffffff;
+  font-family: 'Iosevka Charon', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
-.social {
+
+/* Ícones no canto direito */
+.icones-footer {
   position: absolute;
-  right: 55px;
+  right: 40px;
   display: flex;
-  gap: 17px;
+  align-items: center;
+  gap: 15px;
+
 }
-.social a {
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--red-dark);
+
+.icones-footer i {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #8C0B1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  box-shadow: 0 0 12px rgba(227, 41, 46, 0.16);
+  transition: 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+
+}
+
+.icones-footer img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.icones-footer i:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 8px rgba(140, 11, 26, 0.7));
+  background: #8C0B1A;
 }
 
 @media (max-width: 900px) {
@@ -347,15 +436,18 @@ footer > span {
     grid-template-columns: 1fr;
     padding: 25px;
   }
+
   .description {
     margin-left: 0;
   }
+
   .cards {
     grid-template-columns: 1fr;
     padding: 5px 25px;
     gap: 25px;
   }
 }
+
 @media (max-width: 650px) {
   .navbar {
     height: auto;
@@ -364,31 +456,39 @@ footer > span {
     padding: 12px;
     gap: 12px;
   }
+
   nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
+
   main {
     width: calc(100% - 25px);
   }
+
   .intro {
     padding: 15px;
   }
+
   .title h1 {
     font-size: 32px;
   }
+
   .cards {
     padding: 5px 0;
   }
+
   .details {
     flex-wrap: wrap;
   }
+
   footer {
     padding: 15px;
     gap: 15px;
     flex-direction: column;
   }
+
   .social {
     position: static;
   }
