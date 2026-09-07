@@ -180,6 +180,8 @@ main {
   margin-bottom: 22px;
 }
 
+
+
 .lista-tec-itens {
   display: flex;
   flex-wrap: wrap;
@@ -187,15 +189,21 @@ main {
 }
 
 .card-tec-itens {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: linear-gradient(160deg, #5c0f18, #3a0910);
   border: 1px solid rgba(140, 11, 26, 0.6);
   border-radius: 12px;
   display: flex;
+  flex-direction: column;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secao-tec p{
+  font-size: 12px;
 }
 
 .card-tec-itens:hover {

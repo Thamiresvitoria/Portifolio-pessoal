@@ -165,16 +165,27 @@ main {
   flex-direction: column;
 }
 
-.card-projeto-img {
+.card-projeto-img img{
   width: 100%;
-  height: 140px;
+  height: 160px;
   border-radius: 10px;
   margin-bottom: 16px;
   background: linear-gradient(160deg, #5c0f18, #2c070c);
   border: 1px solid rgba(140, 11, 26, 0.6);
 }
 
+.card-projeto-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background: linear-gradient(160deg, #5c0f18, #2c070c);
+  border: 1px solid rgba(140, 11, 26, 0.6);
+}
+
+
 .card-projeto h3 {
+  margin-top: 10px;
   font: 400 20px "Barlow Condensed";
   letter-spacing: 0.03em;
   margin-bottom: 10px;
@@ -191,7 +202,14 @@ main {
   display: flex;
   gap: 10px;
   margin-bottom: 18px;
+
+  span{
+    text-align: center;
+    align-items: center;
+    padding: 5px 3px;
+  }
 }
+
 
 .tag {
   flex: 1;
