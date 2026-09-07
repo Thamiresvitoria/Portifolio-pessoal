@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="../Assets/Logo_semfundo.svg" type="image/x-icon">
-  <title></title>
+  <title>CONTATO</title>
 </head>
 
 <body>
@@ -21,32 +21,49 @@
         <li><a href="../sobre/index.html">SOBRE MIM</a></li>
         <li><a href="../tecnologia/index.html">TECNOLOGIAS</a></li>
         <li><a href="../projeto/index.html">PROJETOS</a></li>
-        <li><a href="index.html">CONTATOS</a></li>
+        <li><a href="index.html" class="active">CONTATOS</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container-contato">
-        <img src="../Assets/estrela.svg" alt="Contato">
-        <div class="texto-contato">
-          <h1>VAMOS CONSTRUIR</h1>
-          <span> ALGO INCRÍVEL JUNTOS ?</span>
-          <p>Entre em contato comigo para criarmos projetos
-            incriveis. Estou sempre aberta a novas oportunidades
-            e ideias.</p>
+    <section class="hero-contato">
+      <div class="container">
+
+        <div class="contato-texto">
+          <div class="estrela">
+            <img src="../Assets/estrela.svg" alt="">
+          </div>
+          <div>
+            <h1>VAMOS CONSTRUIR<br><span>ALGO JUNTO?</span></h1>
+            <p>Entre em contato comigo para criarmos projetos incríveis. Estou sempre aberta a novas oportunidades e ideias.</p>
+          </div>
         </div>
 
-        <div class="formulario">
-          <form>
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu email" required >
-            <input type="text" placeholder="Assunto" required>
-            <textarea placeholder="Sua mensagem"></textarea>
-            <button type="submit">ENVIAR MENSAGEM</button>
-          </form>
-        </div>
+        <form class="contato-form">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="">
+          </div>
+
+          <div class="form-group">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="">
+          </div>
+
+          <div class="form-group">
+            <label for="proposta">Proposta:</label>
+            <textarea id="proposta" name="proposta" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar mensagem</button>
+        </form>
+
       </div>
     </section>
   </main>
@@ -54,9 +71,9 @@
   <footer>
     <p> © TODOS OS DIREITOS RESERVADOS</p>
       <div class="icones-footer">
-        <i><a href="https://www.linkedin.com/in/thamires-vitoria-muniz-da-silva-7b3878352/" target="_blank"><img src="./Assets/linkedin 1.svg" alt="LinkedIn"></a></i>
-        <i><a href="https://github.com/Thamiresvitoria" target="_blank"><img src="./Assets/github 1.svg" alt="GitHub"></a></i>
-        <i><a href="https://wa.me/5511999999999" target="_blank"><img src="./Assets/whatsapp 1.svg" alt="WhatsApp"></a></i>
+        <i><a href="https://www.linkedin.com/in/thamires-vitoria-muniz-da-silva-7b3878352/" target="_blank"><img src="../Assets/linkedin 1.svg" alt="LinkedIn"></a></i>
+        <i><a href="https://github.com/Thamiresvitoria" target="_blank"><img src="../Assets/github 1.svg" alt="GitHub"></a></i>
+        <i><a href="https://wa.me/5511999999999" target="_blank"><img src="../Assets/whatsapp 1.svg" alt="WhatsApp"></a></i>
       </div>
   </footer>
 
