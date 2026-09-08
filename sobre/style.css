@@ -386,6 +386,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 6.5rem;
 }
 
 /* Texto centralizado */
@@ -416,7 +417,7 @@ footer>p {
   justify-content: center;
   border-radius: 50%;
   transition: 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
-
+  
 }
 
 .icones-footer img {

@@ -42,7 +42,7 @@ header {
 
 .navbar {
   width: calc(100% - 40px);
-  max-width: 1360px;
+  max-width: 1400px;
   height: 76px;
   margin: 30px auto 0;
   padding: 0 40px;
@@ -58,8 +58,8 @@ header {
 /* Logo */
 
 #logo {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -121,20 +121,20 @@ main {
 
 .hero {
   width: calc(100% - 80px);
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 80px auto;
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 420px 1fr;
   grid-template-rows: auto auto auto;
-  column-gap: 50px;
+  column-gap: 80px;
   align-items: center;
 }
 
 
 
 .foto {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   grid-column: 1;
   grid-row: 1 / 4;
   border: 1px solid #8C0B1A;
@@ -175,7 +175,7 @@ main {
   display: block;
   margin-bottom: 5px;
   color: #8c8c8c;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -183,8 +183,8 @@ main {
 .textos h1 {
   margin: 0;
   color: #ffffff;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 48px;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: 0.02em;
 }
@@ -196,7 +196,7 @@ main {
 .textos h2 {
   margin-top: 8px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -204,7 +204,7 @@ main {
 .textos p {
   margin-top: 10px;
   color: #dedede;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.45;
 }
@@ -219,13 +219,13 @@ main {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px 14px;
+    padding: 14px 16px;
     border: 1px solid #8C0B1A;
-    border-radius: 3px;
+    border-radius: 5px;
     background: #1a090b;
     color: #ffffff;
     font-family: 'Iosevka Charon', monospace;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     cursor: pointer;
     transition: 0.3s ease;
@@ -294,6 +294,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 10.5rem;
 }
 
 /* Texto centralizado */
