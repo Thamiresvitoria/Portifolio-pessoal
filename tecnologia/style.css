@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Iosevka+Charon:wght@300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -14,45 +14,52 @@ body {
   min-height: 100vh;
   background: #111113;
   color: #ffffff;
-  font-family: 'Iosevka Charon', monospace;
+  font-family: "Iosevka Charon", monospace;
   font-weight: 300;
   overflow-x: hidden;
+
+  /* Mantém o footer no final da tela */
   display: flex;
   flex-direction: column;
 }
 
-body:before {
+/* Textura de fundo */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 0;
   opacity: 0.025;
   background-image: radial-gradient(#fff 0.6px, transparent 0.6px);
   background-size: 5px 5px;
 }
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
+  position: relative;
+  z-index: 1;
   width: calc(100% - 40px);
   max-width: 1360px;
   height: 60px;
   margin: 22px auto 0;
   padding: 0 18px;
-  border: 1px solid #8C0B1A;
+  border: 1px solid #8c0b1a;
   border-radius: 30px;
-  background: rgba(106, 2, 11, 20%);
+  background: rgba(106, 2, 11, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  filter: blur(50%);
 }
 
-.navbar>img {
+.navbar > img {
   margin-left: 1rem;
   width: 42px;
   height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: contain;
 }
 
 .navbar img {
@@ -67,17 +74,21 @@ ul {
   flex-direction: row;
   align-items: center;
   gap: 25px;
+  list-style: none;
 }
 
 ul a {
   position: relative;
   color: #dedede;
   text-decoration: none;
-  font: 400 16px "Barlow Condensed";
-  letter-spacing: 0.04em;
+  font-family: "Iosevka Charon", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
 }
 
-nav a:after {
+nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -86,39 +97,56 @@ nav a:after {
   height: 1px;
   background: #fff;
   transform: scaleX(0);
-  transition: 0.2s;
+  transform-origin: center;
+  transition: transform 0.2s ease;
 }
 
-nav a:hover:after,
-nav a.active:after {
+nav a:hover::after,
+nav a.active::after {
   transform: scaleX(1);
 }
 
+/* =========================
+   MAIN
+========================= */
+
 main {
+  position: relative;
+  z-index: 1;
   width: calc(100% - 70px);
   max-width: 1320px;
   margin: 35px auto 25px;
+  flex: 1;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 60px;
+
   align-items: center;
+
   min-height: 335px;
+
   padding: 25px 55px;
 }
 
 .titulo {
   display: flex;
   align-items: center;
-  gap: 25px
+  gap: 25px;
 }
 
 .estrela {
   position: relative;
+
   width: 85px;
   height: 70px;
+
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -127,26 +155,34 @@ main {
 .estrela img {
   width: 60px;
   height: 60px;
+
   object-fit: contain;
 }
 
 .estrela::after {
   content: "";
+
   position: absolute;
+
   bottom: 0;
   left: 50%;
-  transform: translate(-50%);
+
+  transform: translateX(-50%);
+
   width: 50px;
   height: 2px;
+
   background: #8c0b1a;
 }
 
 .titulo h1 {
   font-size: 38px;
   font-weight: 400;
+
   letter-spacing: 0.03em;
-  margin-bottom: 8px;
+
   margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .titulo p {
@@ -154,119 +190,162 @@ main {
   letter-spacing: 0.06em;
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .card-todos {
   margin: 66px 25px 0;
+
   display: flex;
   flex-direction: column;
+
   gap: 26px;
+
   align-items: center;
   justify-content: center;
 }
 
 .secao-tec {
-  border: 1px solid #8C0B1A;
+  border: 1px solid #8c0b1a;
   border-radius: 14px;
+
   background: rgba(140, 11, 26, 0.06);
+
   padding: 50px 100px;
+
   justify-content: center;
   text-align: center;
-  transition: 0.2s ease-in, box-shadow 0.02.s ease-in;
+
+  transition:
+    transform 0.2s ease-in,
+    box-shadow 0.2s ease-in;
 }
 
-.secao-tec:hover{
+.secao-tec:hover {
   transform: scale(1.03);
-  box-shadow: 0 5px 10px #8C0B1A;
+
+  box-shadow: 0 5px 10px rgba(140, 11, 26, 0.7);
 }
 
 .secao-tec h2 {
   font-size: 20px;
-  font-weight:600;
+  font-weight: 600;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   color: #dedede;
+
   margin-bottom: 30px;
 }
 
+.secao-tec p {
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
 
+/* =========================
+   LISTA DE TECNOLOGIAS
+========================= */
 
 .lista-tec-itens {
   display: flex;
   flex-wrap: wrap;
+
   gap: 20px;
+
+  justify-content: center;
 }
 
 .card-tec-itens {
   width: 90px;
   height: 90px;
+
   background: linear-gradient(160deg, #5c0f18, #3a0910);
+
   border: 1px solid rgba(140, 11, 26, 0.6);
+
   border-radius: 12px;
+
   display: flex;
   flex-direction: column;
+
   gap: 8px;
+
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.secao-tec p{
-  font-size: 14px;
-  margin-top:0.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card-tec-itens:hover {
   transform: translateY(-4px);
+
   box-shadow: 0 6px 16px rgba(140, 11, 26, 0.45);
 }
 
 .card-tec-itens img {
   width: 34px;
   height: 34px;
+
   object-fit: contain;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 80px;
   padding: 0 40px;
-  border-top: 1px solid #8C0B1A;
+  border-top: 1px solid #8c0b1a;
   background: #1a090b;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 10.5rem;
 }
 
 /* Texto centralizado */
-footer>p {
+
+footer > p {
   color: #ffffff;
-  font-family: 'Iosevka Charon', monospace;
+  font-family: "Iosevka Charon", monospace;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
-/* Ícones no canto direito */
+/* =========================
+   ÍCONES DO FOOTER
+========================= */
+
 .icones-footer {
   position: absolute;
   right: 40px;
   display: flex;
   align-items: center;
   gap: 15px;
-
 }
 
 .icones-footer i {
   width: 45px;
   height: 45px;
-  border: 1px solid #8C0B1A;
+  border: 1px solid #8c0b1a;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
-
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out;
 }
 
 .icones-footer img {
@@ -278,5 +357,63 @@ footer>p {
 .icones-footer i:hover {
   transform: translateY(-3px);
   filter: drop-shadow(0 0 8px rgba(140, 11, 26, 0.7));
-  background: #8C0B1A;
+  background: #8c0b1a;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    width: calc(100% - 20px);
+  }
+
+  ul {
+    margin-right: 1rem;
+    gap: 12px;
+  }
+
+  ul a {
+    font-size: 13px;
+  }
+
+  main {
+    width: calc(100% - 30px);
+  }
+
+  .hero {
+    display: flex;
+    padding: 25px 15px;
+  }
+
+  .titulo h1 {
+    font-size: 30px;
+  }
+
+  .card-todos {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .secao-tec {
+    width: 100%;
+    padding: 35px 20px;
+  }
+
+  .icones-footer {
+    position: static;
+    margin-left: auto;
+  }
+
+  footer {
+    min-height: 100px;
+    padding: 15px 20px;
+
+    justify-content: space-between;
+  }
+
+  footer > p {
+    font-size: 11px;
+  }
 }

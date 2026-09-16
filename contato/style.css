@@ -73,8 +73,11 @@ ul a {
   position: relative;
   color: #dedede;
   text-decoration: none;
-  font: 400 16px "Barlow Condensed";
-  letter-spacing: 0.04em;
+  font-family: 'Iosevka Charon', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
 }
 
 nav a:after {
@@ -98,6 +101,7 @@ main {
   width: calc(100% - 70px);
   max-width: 1320px;
   margin: 35px auto 25px;
+  flex:1;
 }
 
 .hero-contato {
