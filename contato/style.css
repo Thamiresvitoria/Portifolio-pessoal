@@ -244,8 +244,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 10.5rem;
 }
 
 footer>p {
