@@ -171,11 +171,13 @@ main {
 
 .card-projeto-img img {
   width: 100%;
-  height: 160px;
+  height: 150px;
   border-radius: 10px;
   margin-bottom: 16px;
   background: linear-gradient(160deg, #5c0f18, #2c070c);
   border: 1px solid rgba(140, 11, 26, 0.6);
+  overflow: hidden;
+
 }
 
 .card-projeto-img {
@@ -185,6 +187,7 @@ main {
   margin-bottom: 16px;
   background: linear-gradient(160deg, #5c0f18, #2c070c);
   border: 1px solid rgba(140, 11, 26, 0.6);
+
 }
 
 .card-projeto h3 {
